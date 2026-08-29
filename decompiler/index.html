@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Toy Decompiler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Web Toy Decompiler</h1>
+            <p>가상의 어셈블리 코드를 입력하면 고수준 C 스타일 코드로 디컴파일합니다.</p>
+        </header>
+
+        <div class="workspace">
+            <!-- 입력 패널: 어셈블리 -->
+            <div class="panel">
+                <h2>1. Input (Assembly / Bytecode)</h2>
+                <textarea id="assemblyInput" placeholder="여기에 어셈블리 코드를 입력하세요... (예: MOV R1, 10)">
+MOV R1, 10
+MOV R2, 20
+ADD R1, R2
+CMP R1, 30
+JEQ 8
+PRINT "Not Equal"
+JMP 10
+PRINT "Equal!"
+RET</textarea>
+                <button id="decompileBtn">디컴파일 실행 (Decompile)</button>
+            </div>
+
+            <!-- 출력 패널: 디컴파일된 C 스타일 코드 -->
+            <div class="panel">
+                <h2>2. Output (Decompiled High-Level Code)</h2>
+                <pre id="outputCode"><code>디컴파일 결과가 여기에 표시됩니다.</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
